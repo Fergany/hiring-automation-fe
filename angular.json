@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hiring-automation-fe"
+    }
+  },
+  "defaultProject": "hiring-automation-fe",
+  "cli": {
+    "analytics": "4aec2196-ff27-418f-82ed-fcff049e0ad9"
+  }
 }
