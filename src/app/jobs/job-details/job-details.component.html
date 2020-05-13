@@ -1,9 +1,16 @@
 <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{job.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{job.title}}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+  </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{job.description}}</li>
+      <li class="list-group-item">{{job.requiredSkills}}</li>
+    </ul>
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a class="card-link" [routerLink]="'/job/all'">Contacts</a>
+      <a class="card-link" [routerLink]="'/job/all'">All Open Positions</a>
       <a class="card-link" [routerLink]="['/job', jobId, 'apply']">Apply</a>
     </div>
-  </div>
+</div>
