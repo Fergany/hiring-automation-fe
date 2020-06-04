@@ -8,8 +8,10 @@ export class JobSubmissionService {
 
   constructor(private http: HttpClient) { }
 
-  submitJob(jobId) {
+  submitJob(jobId, candidate) {
+    console.log("jobId", jobId, "candidate", candidate);
     let headers = new HttpHeaders().set("content-type", "application/json;charset=UTF-8");
-    return this.http.post("http://localhost:8080/jobs/" + jobId + "/apply",  { headers: headers });
+    return this.http.post("http://localhost:8080/job/" + jobId + "/apply", candidate, { headers: headers });
   }
+
 }

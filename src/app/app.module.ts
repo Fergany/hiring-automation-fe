@@ -5,9 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobDetailsComponent } from './jobs/job-details/job-details.component';
-import { JobDetailsService } from './jobs/job-details/job-details.service';
-import { FormBuilder } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +14,8 @@ import { FormBuilder } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })
