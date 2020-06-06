@@ -1,6 +1,5 @@
 <p>job-submission works!</p>
-<form formGroup="jobSubmissionForm" (ngSubmit)="submitJob()">
-
+<form [formGroup]="jobSubmissionForm" (submit)="submitJob()">
     <div>
         <label for="firstName">
           First Name
