@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { JobApplicationsService } from './job-applications.service';
 
 @Component({
   selector: 'app-job-applications',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobApplicationsComponent implements OnInit {
 
-  constructor() { }
+  jobId: String;
+  jobApplications: any;
+  constructor(private service: JobApplicationsService, 
+              private route: ActivatedRoute) {
+   }
 
   ngOnInit(): void {
+  this.route.paramMap.subscribe(params =>
+    this.jobId = params.get("id")
+    );
+
+    this.service.findAll(this.jobId).subscribe(jobApplications => {
+        this.jobApplications = jobApplications;
+        console.log(this.jobApplications);
+      }
+    );
   }
 
 }
