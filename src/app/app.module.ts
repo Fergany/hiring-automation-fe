@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JobDetailsComponent } from './jobs/job-details/job-details.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JobSubmissionComponent } from './jobs/job-submission/job-submission.component';
+import { JobDetailsComponent } from './jobs/job-details/job-details.component';
+import { JobApplicationsComponent } from './jobs/job-applications/job-applications.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     JobDetailsComponent,
-    JobSubmissionComponent
+    JobSubmissionComponent,
+    JobApplicationsComponent
   ],
   imports: [
     BrowserModule,
