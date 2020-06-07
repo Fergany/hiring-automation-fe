@@ -11,6 +11,7 @@ export class JobApplicationsComponent implements OnInit {
 
   jobId: String;
   jobApplications: any;
+  isDataAvailable:boolean = false;
   constructor(private service: JobApplicationsService, 
               private route: ActivatedRoute) {
    }
@@ -23,6 +24,7 @@ export class JobApplicationsComponent implements OnInit {
     this.service.findAll(this.jobId).subscribe(jobApplications => {
         this.jobApplications = jobApplications;
         console.log(this.jobApplications);
+        this.isDataAvailable = true;
       }
     );
   }
