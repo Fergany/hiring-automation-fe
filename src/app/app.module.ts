@@ -5,19 +5,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobDetailsComponent } from './jobs/job-details/job-details.component';
-import { JobDetailsService } from './jobs/job-details/job-details.service';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JobSubmissionComponent } from './jobs/job-submission/job-submission.component';
 @NgModule({
   declarations: [
     AppComponent,
-    JobDetailsComponent
+    JobDetailsComponent,
+    JobSubmissionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [JobDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
