@@ -4,6 +4,7 @@ import { JobDetailsComponent } from './jobs/job-details/job-details.component';
 import { AppComponent } from './app.component';
 import { JobSubmissionComponent } from './jobs/job-submission/job-submission.component';
 import { JobApplicationsComponent } from './jobs/job-applications/job-applications.component';
+import { JobApplicationComponent } from './jobs/job-application/job-application.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,11 @@ const routes: Routes = [
           { path: ':id', component: JobDetailsComponent },
           { path: ':id/apply', component: JobSubmissionComponent },
           { path: ':id/applications', component: JobApplicationsComponent }
+        ]
+      },
+      {
+        path: 'jobApplication', children: [
+          { path: ':id', component: JobApplicationComponent }
         ]
       }
     ]
