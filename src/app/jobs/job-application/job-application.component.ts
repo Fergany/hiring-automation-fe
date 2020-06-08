@@ -19,11 +19,13 @@ export class JobApplicationComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.jobApplicationId = params.get("id");
+      
     });
 
     this.service.getJobApplication(this.jobApplicationId).subscribe(jobApplication => {
       this.jobApplication = jobApplication;
       this.isDataAvailable = true;
+      console.log(this.jobApplication);
       });
   }
 

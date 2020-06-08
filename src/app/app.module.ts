@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { JobSubmissionComponent } from './jobs/job-submission/job-submission.component';
 import { JobDetailsComponent } from './jobs/job-details/job-details.component';
 import { JobApplicationsComponent } from './jobs/job-applications/job-applications.component';
+import { JobApplicationComponent } from './jobs/job-application/job-application.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JobDetailsComponent,
     JobSubmissionComponent,
-    JobApplicationsComponent
+    JobApplicationsComponent,
+    JobApplicationComponent
   ],
   imports: [
     BrowserModule,

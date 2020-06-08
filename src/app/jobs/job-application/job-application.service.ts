@@ -10,6 +10,6 @@ export class JobApplicationService {
 
   getJobApplication(id){
     let headers = new HttpHeaders().set("content-type", "application/json;charset=UTF-8");
-    return this.http.get("http://localhost:8080/jobApplication/" + id,  { headers: headers });
+    return this.http.get("http://localhost:8080/jobSubmission/" + id,  { headers: headers });
   }
 }
