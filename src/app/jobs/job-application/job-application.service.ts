@@ -12,4 +12,9 @@ export class JobApplicationService {
     let headers = new HttpHeaders().set("content-type", "application/json;charset=UTF-8");
     return this.http.get("http://localhost:8080/jobSubmission/" + id,  { headers: headers });
   }
+
+  downloadFile(id){
+    let headers = new HttpHeaders().set("content-type", "application/json;charset=UTF-8");
+    return this.http.get("http://localhost:8080/download/" + id,  { headers: headers });
+  }
 }
