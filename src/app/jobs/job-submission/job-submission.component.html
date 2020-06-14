@@ -26,12 +26,12 @@
         </label>
         <input id="phone" type="text" formControlName="phone">
       </div>
-
-      <div>
-        <label for="fileUploadedId">
-          FileUploadedId
-        </label>
-        <input id="fileUploadedId" type="text" formControlName="fileUploadedId">
-      </div>
       <button class="button" type="submit">Apply</button>
 </form>
+
+<form [formGroup]="uploadFileForm" >
+
+  <input type="file" formControlName="fileUploaded" (change)="uploadFile($event)" />
+
+</form>
+
