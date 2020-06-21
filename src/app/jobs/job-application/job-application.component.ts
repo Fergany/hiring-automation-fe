@@ -29,4 +29,18 @@ export class JobApplicationComponent implements OnInit {
       });
   }
 
+  downloadFile(id){
+    this.service.downloadFile(id).subscribe(response => {
+			//let blob:any = new Blob([response.blob()], { type: 'text/json; charset=utf-8' });
+			//const url= window.URL.createObjectURL(blob);
+      //window.open(url);
+      console.log(response);
+      debugger;
+			window.location.href = response.url;
+			//fileSaver.saveAs(blob, 'employees.json');
+		}), error => console.log('Error downloading the file'),
+                 () => console.info('File downloaded successfully');
+  }
+
+
 }
