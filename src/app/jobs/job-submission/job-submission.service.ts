@@ -14,4 +14,9 @@ export class JobSubmissionService {
     return this.http.post("http://localhost:8080/job/" + jobId + "/apply", candidate, { headers: headers });
   }
 
+  uploadFile(uploadedFile: File){
+    const formData: FormData = new FormData();
+    formData.append('file', uploadedFile, uploadedFile.name);
+    return this.http.post("http://localhost:8080/upload", formData);
+  }
 }

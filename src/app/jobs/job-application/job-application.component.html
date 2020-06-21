@@ -1,0 +1,13 @@
+<div *ngIf="isDataAvailable" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{jobApplication.candidate.firstName + " " + jobApplication.candidate.lastName}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Apply on {{jobApplication.candidate.email}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Apply for {{jobApplication.job.title}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Apply on {{jobApplication.submittedAt}}</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/job/{{jobApplication.job.id}}/applications" class="card-link">View All Applications</a>
+      <a href="http://localhost:8080/download/{{jobApplication.candidate.fileUploaded.id}}" class="card-link" >View CV</a>
+      <!-- (click)="downloadFile(jobApplication.candidate.fileUploaded.id)" -->
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
