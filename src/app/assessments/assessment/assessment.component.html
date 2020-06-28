@@ -1,1 +1,10 @@
-<p>assessment works!</p>
+<div *ngIf="isDataAvailable" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Assessment {{assessment.exam.examLink}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Sent to {{assessment.candidate.firstName + " " + assessment.candidate.lastName}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">on {{assessment.sentAt}}</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <!-- <a href="/job/{{jobApplication.job.id}}/applications" class="card-link">View All Applications</a> -->
+    </div>
+  </div>
