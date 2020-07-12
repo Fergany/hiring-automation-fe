@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { JobSubmissionComponent } from './jobs/job-submission/job-submission.component';
 import { JobApplicationsComponent } from './jobs/job-applications/job-applications.component';
 import { JobApplicationComponent } from './jobs/job-application/job-application.component';
+import { AssessmentComponent } from './assessments/assessment/assessment.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,11 @@ const routes: Routes = [
       {
         path: 'jobApplication', children: [
           { path: ':id', component: JobApplicationComponent }
+        ]
+      },
+      {
+        path: 'assessments', children: [
+          { path: 'jobSubmission/:id', component: AssessmentComponent }
         ]
       }
     ]

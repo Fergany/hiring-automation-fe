@@ -9,6 +9,7 @@ import { JobSubmissionComponent } from './jobs/job-submission/job-submission.com
 import { JobDetailsComponent } from './jobs/job-details/job-details.component';
 import { JobApplicationsComponent } from './jobs/job-applications/job-applications.component';
 import { JobApplicationComponent } from './jobs/job-application/job-application.component';
+import { AssessmentComponent } from './assessments/assessment/assessment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { JobApplicationComponent } from './jobs/job-application/job-application.
     JobDetailsComponent,
     JobSubmissionComponent,
     JobApplicationsComponent,
-    JobApplicationComponent
+    JobApplicationComponent,
+    AssessmentComponent
   ],
   imports: [
     BrowserModule,
