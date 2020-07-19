@@ -1,0 +1,12 @@
+<p>assessment-submission works!</p>
+<form [formGroup]="assessmentSubmissionForm" (ngSubmit)="submitAssessment()">
+    <div>
+        <label for="candidateFeedback">
+            Candidate Feedback
+        </label>
+        <input id="candidateFeedback" type="text" formControlName="candidateFeedback">
+      </div>
+      <button class="button" type="submit">Submit</button>
+</form>
+
+
